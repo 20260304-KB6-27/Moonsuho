@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    form : 태그 사용자로부터 입력을 받기 위한 양식을 만드는 태그 (여러 태그를 같이 보낼 수 있음!)
+    action : 폼데이터를 전송할 서버의 URL 
+    method : 데이터 전송 방식 (GET / POST)
+    -->
+    <form action="https://www.naver.com" method="get">
+      <table>
+        <tr>
+          <!-- for는 id를 찾아가기 위함 -->
+          <td><label for="username">이름</label></td>
+          <!-- 서버에서 request로 받아서 보내줄 때 name에 지정한 이름으로 꺼내쓸 수 있음 -->
+          <!-- 
+            input 태그
+            name : 서버로 전송될 때 사용되는 이름
+            id : html 요소의 고유식별자
+            type : 입력필드의 종류
+            -->
+          <td><input id="username" name="username" type="text" /></td>
+        </tr>
+        <tr>
+          <td>성별</td>
+          <td>
+            <!-- name을 같은 이름으로 지정해주니까 중복 선택이 x -->
+            <input id="man" type="radio" name="gender" value="m" />
+            <label for="man">남자</label>
+            <input id="woman" type="radio" name="gender" value="w" />
+            <label for="woman">여자</label>
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="가입" />
+    </form>
+  </body>
+</html>
