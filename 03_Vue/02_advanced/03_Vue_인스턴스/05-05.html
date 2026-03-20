@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue 3 연습용 Composition</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div @contextmenu="ctxStop">
+        <a href="https://facebook.com" @click="confirmFB">페이스북</a>
+      </div>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        setup() {
+          const ctxStop = (e) => {
+            console.log('이벤트가 발생한 요소: ');
+            e.preventDefault();
+          };
+          const confirmFB = (e) => {
+            console.log('자식이벤트가 발생한 요소: ');
+            if (!confirm('페이스북으로 이동할까요?')) {
+              e.preventDefault();
+            }
+          };
+          return { ctxStop, confirmFB };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
