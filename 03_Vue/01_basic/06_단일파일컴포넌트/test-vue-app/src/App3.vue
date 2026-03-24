@@ -18,7 +18,7 @@ const idols = ref([
   { id: 3, name: 'EXO', checked: false },
   { id: 4, name: 'ITZY', checked: false },
   { id: 5, checked: false },
-  { id: 4, name: 'NCT' },
+  { id: 6, name: 'NCT' },
 ]);
 </script>
 
