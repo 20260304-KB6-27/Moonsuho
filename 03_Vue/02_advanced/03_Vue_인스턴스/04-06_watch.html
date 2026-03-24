@@ -48,12 +48,13 @@
           //   );
 
           watch(
-            () => ({ ...user }), //객체를 복사해서
+            () => ({ ...user.value }), // 1. user.value를 복사해서 반환 (참조가 아닌 복사본 전달)
             (newVal, oldVal) => {
               console.log(
                 `기존 사용자: ${oldVal.age}, ${oldVal.email} -> 변경된 사용자 ${newVal.age}, ${newVal.email}`,
               );
             },
+            { deep: true }, //2. 객체 내부의 속성 변경을 감시하기 위해 필수
           );
           return { user, name };
         },
