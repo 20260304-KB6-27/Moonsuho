@@ -1,0 +1,24 @@
+<template>
+  <h2>3. 범용 CSS 모듈</h2>
+  <!-- css모듈은 객체처럼 사용한다 -->
+  <div :class="style.box">css 모듈이 적용된 박스입니다</div>
+  <div>style:{{ style }}</div>
+</template>
+
+<script setup>
+import { useCssModule } from 'vue';
+// composition방식 -> useCssModule()로 $style객체를 꺼내옴
+const style = useCssModule();
+</script>
+
+<style module>
+/* module
+- CSS모듈은 클래스명 자체를 고유하게 바꾼다 */
+.box {
+  /* padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px; */
+  background-color: greenyellow;
+  border: 2px solid green;
+}
+</style>
