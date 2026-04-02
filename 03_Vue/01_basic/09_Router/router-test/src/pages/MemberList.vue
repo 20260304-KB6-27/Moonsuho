@@ -2,7 +2,7 @@
   <h1>Members</h1>
   <div v-for="m in members" :key="m.id">
     <RouterLink :to="{ name: 'members/id', params: { id: m.id } }">
-      <img :src="m.poto" style="width: 90px; height: 110px" />
+      <img :src="m.photo" style="width: 90px; height: 110px" />
       <h6>{{ m.name }}</h6>
     </RouterLink>
   </div>
