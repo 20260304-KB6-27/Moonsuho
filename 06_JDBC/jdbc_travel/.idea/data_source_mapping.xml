@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/database.sql" value="ef63f219-0bd6-4e97-b5e7-30bae9dd27d5" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/scoula/travel/dao/TravelDaoImpl.java" value="ef63f219-0bd6-4e97-b5e7-30bae9dd27d5" />
+  </component>
+</project>
