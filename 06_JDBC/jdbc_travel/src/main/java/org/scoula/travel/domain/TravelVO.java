@@ -10,6 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 /* 필드명을 csv와 동일하게 지정*/
+//no,district,title,description,address,phone
 public class TravelVO {
     private Long no;
     private String district;
